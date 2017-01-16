@@ -16,8 +16,41 @@
 // This portion of the script is meant to call and display the result of your Function.
 // You do not need to change the following lines, but you may change them if you 
 // are experimenting further or pursuing stretch goals.
+//Create a function call truncatewords
+
+"use strict";
+ var truncateWords = function (longText, numWords)
+{
+var textArray  = longText.split(' ');  
+  console.log(textArray);
+var removeWords = textArray.length - numWords;
+  console.log(removeWords);
+    textArray.splice(numWords,removeWords);
+  console.log(textArray);
+    textArray.push ('...');
+  console.log(textArray);
+var truncString = textArray.join (' ');
+    return truncString;
+} 
+var truncateCharacters = function (longText, charTrunc)
+{
+var textArray = longText.split(' ');
+  console.log(textArray);
+var removeChar = longText.split(':')[0];
+  textArray.push('...');
+  console.log(removeChar  + '...');
+var charString = textArray.join (' ');
+  return charString;
+    
+  
+}
 var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
 var wordLimit = 8;
+var charLimit = ':';
 var shortText = truncateWords(originalText, wordLimit);
+var charBreak = truncateCharacters(originalText, charLimit)
+  
+
 console.log('originalText: ' + originalText);
-console.log('shortText: ' + shortText);
+// console.log('shortText: ' + shortText);
+console.log('charBreak: ' + charBreak);
