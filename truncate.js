@@ -38,7 +38,7 @@ var textArray = longText.split(' ');
   console.log(textArray);
 var removeChar = longText.split(':')[0];
   textArray.push('...');
-  console.log(removeChar  + '...');
+  console.log(removeChar  + ':' + '...');
 var charString = textArray.join (' ');
   return charString;
     
